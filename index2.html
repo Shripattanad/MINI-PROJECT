@@ -1,0 +1,141 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <div class="subscription-container">
+        <h2>Subscribe to our Newsletter</h2>
+        <form id="subscriptionForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Newsletter</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Institutional Newsletter</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="subscribe.html">Subscribe</a>
+            <a href="newsletter.html">Newsletters</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to our Newsletter</h2>
+            <p>Stay updated with the latest information about:</p>
+            <ul>
+                <li>Cultural Events</li>
+                <li>Sports Events</li>
+                <li>IEEE Events</li>
+                <li>NSS Events</li>
+                <li>Placements</li>
+            </ul>
+            <a href="subscribe.html" class="button">Subscribe Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Institutional Newsletter. All rights reserved.</p>
+    </footer>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to Newsletter</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <header>
+        <h1>Subscribe to our Newsletter</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="subscribe.html">Subscribe</a>
+            <a href="newsletter.html">Newsletters</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Stay updated!</h2>
+            <form id="subscribeForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <h3>Select the categories you're interested in:</h3>
+                <label><input type="checkbox" name="category" value="Cultural"> Cultural Events</label><br>
+                <label><input type="checkbox" name="category" value="Sports"> Sports Events</label><br>
+                <label><input type="checkbox" name="category" value="IEEE"> IEEE Events</label><br>
+                <label><input type="checkbox" name="category" value="NSS"> NSS Events</label><br>
+                <label><input type="checkbox" name="category" value="Placements"> Placements</label><br>
+
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Institutional Newsletter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Subscription successful!');
+        });
+    </script>
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletters</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <header>
+        <h1>Latest Newsletters</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="subscribe.html">Subscribe</a>
+            <a href="newsletter.html">Newsletters</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Recent Newsletters</h2>
+            <ul>
+                <li><strong>Cultural Events</strong> - Date: 01/10/2024</li>
+                <li><strong>Sports Events</strong> - Date: 02/10/2024</li>
+                <li><strong>IEEE Events</strong> - Date: 03/10/2024</li>
+                <li><strong>NSS Events</strong> - Date: 04/10/2024</li>
+                <li><strong>Placements</strong> - Date: 05/10/2024</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Institutional Newsletter. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
