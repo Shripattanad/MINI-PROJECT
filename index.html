@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Logo</title>
+  <style>
+    /* Logo container */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Circle with icon */
+    .logo-icon {
+      background-color: #0073e6;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    /* Logo text styling */
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0073e6;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <div class="logo-icon">N</div>
+    <div>
+      <div class="logo-text">NewsFlash</div>
+      <div class="tagline">Your daily dose of updates</div>
+    </div>
+  </div>
+
+</body>
+</html>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+</head>
+<body>
+    <h2>Signup</h2>
+    <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+</head>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Newsletter</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Newsletter</h1>
+            <p>Stay updated with the latest events and news!</p>
+            <a href="#subscribeSection" class="button">Subscribe Now</a>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="subscribe.html">Subscribe</a>
+            <a href="newsletter.html">Newsletters</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="intro">
+            <h2>Why Subscribe?</h2>
+            <p>Get regular updates on:</p>
+            <ul class="categories">
+                <li>Cultural Events</li>
+                <li>Sports Events</li>
+                <li>IEEE Events</li>
+                <li>NSS Events</li>
+                <li>Placements</li>
+            </ul>
+        </section>
+
+        <!-- Subscription Form Section -->
+        <section id="subscribeSection" class="subscription-container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="subscriptionForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit" class="subscribe-button">Subscribe</button>
+                <p id="message"></p>
+            </form>
+        </section>
+
+        <!-- Newsletters Section -->
+        <section id="newsletters">
+            <h2>Recent Newsletters</h2>
+            <ul class="newsletter-list">
+                <li><strong>Cultural Events</strong> - Date: 01/10/2024</li>
+                <li><strong>Sports Events</strong> - Date: 02/10/2024</li>
+                <li><strong>IEEE Events</strong> - Date: 03/10/2024</li>
+                <li><strong>NSS Events</strong> - Date: 04/10/2024</li>
+                <li><strong>Placements</strong> - Date: 05/10/2024</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Institutional Newsletter. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Submission Alert -->
+    <script>
+        document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('message').textContent = "Subscription successful!";
+        });
+    </script>
+
+</body>
+</html>

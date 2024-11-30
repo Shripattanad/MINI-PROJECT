@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Newsletter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #F4F4FB; /* Soft Lavender */
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            background-color: #004AAD; /* Royal Blue */
+            color: #FFFFFF; /* White */
+            padding: 30px 20px;
+            text-align: left;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header img {
+            width: 80px; /* Slightly smaller logo */
+            margin-right: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 1.4em;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #FFC107; /* Amber Yellow */
+        }
+
+        /* Main Layout */
+        .content {
+            display: flex;
+            padding: 30px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #f9f9f9; /* Light grey background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 30px;
+        }
+
+        .sidebar h3 {
+            color: #004AAD; /* Royal Blue */
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .sidebar select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #9C9CB5; /* Muted Blue-Gray */
+            border-radius: 6px;
+            font-size: 1em;
+            background-color: #ffffff;
+            color: #333;
+            margin-top: 10px;
+            transition: border 0.3s;
+        }
+
+        .sidebar select:focus {
+            border-color: #004AAD; /* Royal Blue */
+            outline: none;
+        }
+
+        /* Profile Column */
+        .profile-column {
+            width: 250px;
+            background-color: #f1f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 30px;
+        }
+
+        .profile-column img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .profile-column h ```css
+        .profile-column h3 {
+            font-size: 1.5em;
+            color: #004AAD; /* Royal Blue */
+            margin-bottom: 10px;
+        }
+
+        .profile-column p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .profile-column a {
+            color: #004AAD; /* Royal Blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+        }
+
+        .about-section {
+            background-color: #f2f4f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .about-section h3 {
+            color: #004AAD; /* Royal Blue */
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            font-size: 1.1em;
+            color: #1A1A1A; /* Deep Charcoal Gray */
+            line-height: 1.6;
+        }
+
+        /* News Cards */
+        .news-updates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: #F4F4FB; /* Soft Lavender */
+            border: 1px solid #9C9CB5; /* Muted Blue-Gray */
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(50% - 10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-card h4 {
+            color: #1A1A1A; /* Deep Charcoal Gray */
+            font-size: 1.4em;
+            margin: 20px 20px 10px;
+        }
+
+        .news-card p {
+            margin: 0 20px 20px;
+            color: #6C6C6C; /* Warm Medium Gray */
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        .news-card a {
+            color: #004AAD; /* Royal Blue */
+            margin: 0 20px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .news-card a:hover {
+            color: #003580; /* Darker Royal Blue */
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h3 {
+            color: #004AAD; /* Royal Blue */
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            color: #1A1A1A; /* Deep Charcoal Gray */
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .contact-section a {
+            color: #004AAD; /* Royal Blue */
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            color: #0056b3; /* Darker Royal Blue */
+            text-decoration: underline;
+        }
+
+        /* Login and Subscription Styles */
+        .login-container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f2f4f7;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex; /* Use flexbox */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            text-align: center; /* Center text */
+        }
+
+        .login-container h3 {
+            color: #004AAD; /* Royal Blue */
+            margin-bottom: 15px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #9C9CB5; /* Muted Blue-Gray */
+            border-radius: 6px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #004AAD; /* Royal Blue */
+            color: #FFFFFF; /* White */
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #003580; /* Darker Royal Blue */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <img src="logo.jpeg">
+            <div>
+                <h1>B.L.D.E.A's V.P. Dr.P.G.Halakatti College of Engineering and Technology</h1>
+                <h2>Bijapur</h2>
+                <p>University Monthly: Campus Newsletter</p>
+            </div>
+        </header>
+
+        <!-- Login and Subscription Section -->
+        <div class="login-container">
+            <h3>Login</h3>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Sign In</button>
+            </form>
+            <p id="loginMessage" style="color: #E74C3C;"></p>
+
+            <h3>Subscribe to Newsletter</h3>
+            <form id="subscriptionForm">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscriptionMessage" style="color: #2ECC71;"></p>
+        </div>
+
+        <!-- Main Content Layout -->
+        <div class="content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Search Events by Category</h3>
+                <select id="category" onchange="filterEvents()">
+                    <option value="all">All</option>
+                    <option value="NSS">NSS</option>
+                    <option value="Cultural">Cultural Events</option>
+                    <option value="Placements">Placements</option>
+                    <option value="Sports">Sports</option>
+                    <option value="IEEE">IEEE Events</option>
+                </select>
+
+                <!-- Second Dropdown for Specific Events -->
+                <select id="eventDropdown" class="second-dropdown" style="display: none;"></select>
+            </aside>
+
+            <!-- Profile Column -->
+            <aside class="profile-column">
+                <h3>Project Participants</h3>
+                <p>Department of Computer Science</p>
+                <p>Rakshita K<br> Sana P<br> Sanjana P<br> Shrilaxmi P</p>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- About Section -->
+                <section class="about-section">
+                    <h3>About the College & Newsletter</h3>
+                    <p>Dr. P.G. Halakatti College of Engineering & Technology, Vijaypur, is committed to fostering an environment of academic excellence and innovation. Our monthly newsletter brings you the latest updates, events, and achievements from our campus, keeping you informed about the dynamic life at our college.</p>
+                </section>
+
+                <!-- Latest News Updates -->
+                <section class="news-updates">
+                    <!-- News Card 1 -->
+                    <div class="news-card" data-category="Cultural">
+                        <img src="cultural-fest.jpg" alt="Cultural Fest">
+                        <h4>Cultural Fest Extravaganza: Lights, Beats, and Creativity</h4>
+                        <p>Date: November 10, 2024</p>
+                        <a href="#">Read More →</a>
+                    </div>
+
+                    <!-- News Card 2 -->
+                    <div class="news-card" data-category="NSS">
+                        <img src="tree-plantation.jpg" alt="Tree Plantation">
+                        <h4>Tree Plantation Drive: NSS Initiative</h4>
+                        <p>Date: November 5, 2024</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="contact-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@college.edu">miniwebapplication @gmail.com</a></p>
+                    <p>Phone: +91 123-456-7890</p>
+                    <p>Address: Dr. P.G. Halakatti College of Engineering & Technology, Vijaypur, Karnataka</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const categoryEvents = {
+            NSS: ["Tree Plantation Drive", "Blood Donation Camp", "Cleanliness Drive"],
+            Cultural: ["Dance Night", "Drama Club Play", "Art Exhibition"],
+            Placements: ["Tech Companies Drive", "Startup Recruitments", "Corporate Talks"],
+            Sports: ["Football Championship", "Cricket Tournament", "Badminton Matches"],
+            IEEE: ["AI Symposium", "Robotics Workshop", "Tech Quiz"]
+        };
+
+        function filterEvents() {
+            const category = document.getElementById("category").value;
+            const eventDropdown = document.getElementById("eventDropdown");
+
+            if (category !== "all" && categoryEvents[category]) {
+                eventDropdown.innerHTML = "";
+                categoryEvents[category].forEach(event => {
+                    const option = document.createElement("option");
+                    option.value = event;
+                    option.textContent = event;
+                    eventDropdown.appendChild(option);
+                });
+                eventDropdown.style.display = "block";
+            } else {
+                eventDropdown.style.display = "none";
+            }
+        }
+
+        // Sample user data for login validation
+        const users = [
+            { username: "user1", password: "password1" },
+            { username: "user2", password: "password2" }
+        ];
+
+        // Handle login form submission
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const loginMessage = document.getElementById("loginMessage");
+
+            // Validate user credentials
+            const user = users.find(user => user.username === username && user.password === password);
+            if (user) {
+                loginMessage.textContent = "Login successful!";
+                // Redirect or perform further actions here
+            } else {
+                loginMessage.textContent = "Invalid username or password.";
+            }
+        });
+
+        // Handle subscription form submission
+        document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById("email").value;
+            const subscriptionMessage = document.getElementById("subscriptionMessage");
+
+            // Simulate subscription process
+            subscriptionMessage.textContent = `Thank you for subscribing with ${email}!`;
+            document.getElementById("subscriptionForm").reset(); // Reset the form
+        });
+    </script>
+</body>
+</html>
